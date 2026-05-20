@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - cd my-app
+      - npm install
+      - npm run build
+      
+artifacts:
+  files: "**/*"
+  base-directory: my-app/dist
+  discard-paths: yes
+  name: compiled.zip
